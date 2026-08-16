@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami & Roastery Story | Aroma & Co. Roasters</title>
+  <meta name="description" content="Pelajari sejarah, filosofi sangrai artisan, dan komitmen sustainable direct-trade Aroma & Co. bersama para petani kopi nusantara.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-hero {
+      padding-top: calc(var(--header-height) + 3rem);
+      padding-bottom: 4rem;
+      background: linear-gradient(180deg, rgba(18,12,10,0.85) 0%, rgba(18,12,10,0.98) 100%),
+                  url('assets/images/roastery.jpg') center/cover no-repeat;
+    }
+    .timeline-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: relative;
+      margin-top: 2rem;
+    }
+    .timeline-step {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .timeline-num {
+      width: 48px;
+      height: 48px;
+      background: rgba(212, 163, 115, 0.2);
+      border: 1px solid var(--color-amber);
+      color: var(--color-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 28C16 23.5817 19.5817 20 24 20H40C44.4183 20 48 23.5817 48 28V42C48 47.5228 43.5228 52 38 52H26C20.4772 52 16 47.5228 16 42V28Z" stroke="currentColor" stroke-width="3"/>
+          <path d="M48 26H51C54.3137 26 57 28.6863 57 32V34C57 37.3137 54.3137 40 51 40H48" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <span>AROMA <span class="accent">& CO.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="menu.html" class="nav-link">Menu Kopi</a>
+        <a href="about.html" class="nav-link active">Tentang Kami</a>
+        <a href="locations.html" class="nav-link">Outlet & Reservasi</a>
+        <a href="guide.html" class="nav-link">Panduan Brewing</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Buka Keranjang">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadgeCount">0</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO ABOUT -->
+    <section class="about-hero">
+      <div class="container" style="text-align: center; max-width: 800px;">
+        <span class="sub-tag">Perjalanan & Filosofi</span>
+        <h1 class="section-title">Dedikasi Sangrai Kopi <span>Berstandar Dunia</span></h1>
+        <p class="section-description">Berdiri sejak 2018, Aroma & Co. hadir dengan satu misi utama: memperkenalkan keanekaragaman karakter kopi terbaik Indonesia melalui teknik mikro-roasting modern dan penyeduhan berpresisi tinggi.</p>
+      </div>
+    </section>
+
+    <!-- ROASTING PROCESS & IMAGE -->
+    <section class="section">
+      <div class="container hero-grid" style="align-items: center;">
+        <div>
+          <img src="assets/images/roastery.jpg" alt="Proses Sangrai Kopi Roastery" style="border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);" loading="lazy">
+        </div>
+        <div>
+          <span class="sub-tag">Proses Roasting Artisan</span>
+          <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 1rem;">Presisi Suhu & <span>Waktu Sangrai</span></h2>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Kami tidak hanya memasak biji kopi; kami membuka potensi tersembunyi di setiap varietal. Menggunakan mesin roaster khusus buatan Jerman, Head Roaster kami memantau kurva sangrai (roast profile) detik demi detik.</p>
+          
+          <div class="timeline-wrap">
+            <div class="timeline-step">
+              <div class="timeline-num">1</div>
+              <div>
+                <h4 style="font-family: var(--font-heading); color: var(--color-sand);">Seleksi Green Bean</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Hanya biji kopi bernilai cupping score di atas 85 yang lulus tahap sortir manual.</p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="timeline-num">2</div>
+              <div>
+                <h4 style="font-family: var(--font-heading); color: var(--color-sand);">Profil Sangrai Presisi</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Pengaturan aliran udara & suhu konveksi untuk menghasilkan karamelisasi gula sempurna tanpa rasa gosong (baked flavor).</p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="timeline-num">3</div>
+              <div>
+                <h4 style="font-family: var(--font-heading); color: var(--color-sand);">Cupping & Quality Check</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Setiap batch diuji rasa oleh Q-Grader bersertifikat sebelum dikemas dengan katup satu arah (one-way valve).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGIN MAP / CARDS -->
+    <section class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="sub-tag">Asal Biji Kopi</span>
+          <h2 class="section-title">Sumber Mitra <span>Petani Lokal</span></h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+          <div class="glass-panel" style="padding: 1.8rem;">
+            <span class="badge badge-gold" style="margin-bottom: 0.8rem;">Sumatra</span>
+            <h3 style="font-family: var(--font-heading); color: var(--color-sand); margin-bottom: 0.4rem;">Aceh Gayo Highland</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Ketinggian 1.400 - 1.600 masl. Profil rasa: Dark Chocolate, Cedar, & Rempah Manis.</p>
+          </div>
+
+          <div class="glass-panel" style="padding: 1.8rem;">
+            <span class="badge badge-amber" style="margin-bottom: 0.8rem;">Bali</span>
+            <h3 style="font-family: var(--font-heading); color: var(--color-sand); margin-bottom: 0.4rem;">Bali Kintamani Organic</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Ketinggian 1.300 masl diproses basah (full washed). Profil rasa: Tangerine, Citrus blossom, & Clean Finish.</p>
+          </div>
+
+          <div class="glass-panel" style="padding: 1.8rem;">
+            <span class="badge badge-gold" style="margin-bottom: 0.8rem;">Sulawesi</span>
+            <h3 style="font-family: var(--font-heading); color: var(--color-sand); margin-bottom: 0.4rem;">Toraja Kalosi Single Estate</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Ketinggian 1.700 masl. Profil rasa: Ripe plum, herbal aroma, & body kental yang elegan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET THE TEAM -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="sub-tag">Tim Profesional</span>
+          <h2 class="section-title">Master Barista <span>& Roaster</span></h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+          <div class="glass-panel" style="padding: 2rem; text-align: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; background: rgba(212,163,115,0.2); border: 2px solid var(--color-amber); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; color: var(--color-amber); font-family: var(--font-heading); font-size: 1.8rem;">
+              HA
+            </div>
+            <h3 style="font-family: var(--font-heading); color: var(--color-sand);">Hendra Arisandi</h3>
+            <span style="font-size: 0.82rem; color: var(--color-amber); text-transform: uppercase; letter-spacing: 1px;">Head Roaster & Q-Grader</span>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.8rem;">Berpengalaman lebih dari 10 tahun meracik kurva sangrai kopi nusantara & dunia.</p>
+          </div>
+
+          <div class="glass-panel" style="padding: 2rem; text-align: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; background: rgba(212,163,115,0.2); border: 2px solid var(--color-amber); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; color: var(--color-amber); font-family: var(--font-heading); font-size: 1.8rem;">
+              SP
+            </div>
+            <h3 style="font-family: var(--font-heading); color: var(--color-sand);">Siti Rahmayanti</h3>
+            <span style="font-size: 0.82rem; color: var(--color-amber); text-transform: uppercase; letter-spacing: 1px;">Lead Mixologist & Barista</span>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.8rem;">Pencipta resep inovatif Smoked Vanilla Cold Brew dan Signature Drink kami.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        Keranjang Pesanan
+      </h3>
+      <button class="close-drawer-btn" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-items-body" id="cartItemsBody"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span id="cartSubtotal">Rp 0</span></div>
+      <div class="cart-summary-row"><span>Pajak Resto (10%)</span><span id="cartTax">Rp 0</span></div>
+      <div class="cart-summary-row total"><span>Total Pemesanan</span><span class="total-price" id="cartTotal">Rp 0</span></div>
+      <button class="btn btn-primary" style="width: 100%; margin-top: 1.2rem;" id="checkoutBtn">Proses Checkout Struk</button>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo"><span>AROMA <span class="accent">& CO.</span></span></a>
+        <p>Micro-roastery kopi artisan premium yang menyajikan kopi pilihan nusantara.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Navigasi</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda Utama</a></li>
+          <li><a href="menu.html">Daftar Menu Kopi</a></li>
+          <li><a href="about.html">Tentang Roastery</a></li>
+          <li><a href="locations.html">Outlet & Reservasi</a></li>
+          <li><a href="guide.html">Kalkulator Brewing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Jam Operasional</h4>
+        <p style="font-size: 0.9rem; color: var(--color-sand);">07.00 - 22.00 WIB</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Buletin Aroma</h4>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Terima kasih telah berlangganan!'); this.reset();">
+          <input type="email" class="custom-input" placeholder="Alamat Email Anda..." required>
+          <button class="btn btn-primary btn-sm" type="submit">Kirim</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aroma & Co. Coffee Roasters. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

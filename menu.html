@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Kopi & Bakery Artisan | Aroma & Co. Roasters</title>
+  <meta name="description" content="Jelajahi daftar menu kopi komplit Aroma & Co. Dari Espresso ganda, Pour Over V60 single origin, Cold Brew 18 jam, hingga Pastry panggang segar.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .menu-header-banner {
+      padding-top: calc(var(--header-height) + 3rem);
+      padding-bottom: 3.5rem;
+      background: linear-gradient(180deg, rgba(18,12,10,0.85) 0%, rgba(30,21,18,0.95) 100%),
+                  url('assets/images/hero-bg.jpg') center/cover no-repeat;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+    .category-pills-wrap {
+      display: flex;
+      gap: 0.6rem;
+      overflow-x: auto;
+      padding-bottom: 0.2rem;
+    }
+    .category-pill {
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: var(--transition-fast);
+    }
+    .category-pill:hover, .category-pill.active {
+      background: var(--color-amber);
+      color: var(--text-dark);
+      border-color: var(--color-amber);
+    }
+    .search-box-wrap {
+      position: relative;
+      min-width: 260px;
+    }
+    .search-box-wrap input {
+      padding-left: 2.8rem;
+    }
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 28C16 23.5817 19.5817 20 24 20H40C44.4183 20 48 23.5817 48 28V42C48 47.5228 43.5228 52 38 52H26C20.4772 52 16 47.5228 16 42V28Z" stroke="currentColor" stroke-width="3"/>
+          <path d="M48 26H51C54.3137 26 57 28.6863 57 32V34C57 37.3137 54.3137 40 51 40H48" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <span>AROMA <span class="accent">& CO.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="menu.html" class="nav-link active">Menu Kopi</a>
+        <a href="about.html" class="nav-link">Tentang Kami</a>
+        <a href="locations.html" class="nav-link">Outlet & Reservasi</a>
+        <a href="guide.html" class="nav-link">Panduan Brewing</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Buka Keranjang">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadgeCount">0</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER -->
+    <section class="menu-header-banner">
+      <div class="container">
+        <span class="sub-tag">Pilihan Spesial Hari Ini</span>
+        <h1 class="section-title" style="margin-bottom: 0.5rem;">Daftar Menu <span>Kopi & Pastry</span></h1>
+        <p class="section-description" style="max-width: 600px; margin: 0 auto;">Pilih rasa favorit Anda, dari racikan espresso klasik hingga inovasi cold brew dan seduhan manual pour over.</p>
+      </div>
+    </section>
+
+    <!-- MENU CONTAINER & FILTER -->
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar glass-panel">
+          <div class="category-pills-wrap">
+            <button class="category-pill active" data-category="all">Semua Menu</button>
+            <button class="category-pill" data-category="espresso">Espresso Bar</button>
+            <button class="category-pill" data-category="manual">Manual Brew</button>
+            <button class="category-pill" data-category="cold">Cold Coffee</button>
+            <button class="category-pill" data-category="noncoffee">Non-Coffee</button>
+            <button class="category-pill" data-category="pastry">Artisan Pastries</button>
+          </div>
+
+          <div class="search-box-wrap">
+            <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <input type="text" id="menuSearchInput" class="custom-input" placeholder="Cari nama kopi atau rasa...">
+          </div>
+        </div>
+
+        <!-- GRID MENU RENDERED BY JS -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Dynamically populated by js/main.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== CART DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        Keranjang Pesanan
+      </h3>
+      <button class="close-drawer-btn" id="closeCartBtn">&times;</button>
+    </div>
+
+    <div class="cart-items-body" id="cartItemsBody">
+      <!-- Dynamic cart items rendered here -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span id="cartSubtotal">Rp 0</span></div>
+      <div class="cart-summary-row"><span>Pajak Resto (10%)</span><span id="cartTax">Rp 0</span></div>
+      <div class="cart-summary-row total"><span>Total Pemesanan</span><span class="total-price" id="cartTotal">Rp 0</span></div>
+      <button class="btn btn-primary" style="width: 100%; margin-top: 1.2rem;" id="checkoutBtn">Proses Checkout Struk</button>
+    </div>
+  </aside>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          <span>AROMA <span class="accent">& CO.</span></span>
+        </a>
+        <p>Micro-roastery kopi artisan premium yang menyajikan kopi pilihan nusantara dengan standar cita rasa tinggi.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Navigasi</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda Utama</a></li>
+          <li><a href="menu.html">Daftar Menu Kopi</a></li>
+          <li><a href="about.html">Tentang Roastery</a></li>
+          <li><a href="locations.html">Outlet & Reservasi</a></li>
+          <li><a href="guide.html">Kalkulator Brewing</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Jam Operasional</h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">Senin - Minggu:</p>
+        <p style="font-size: 0.9rem; color: var(--color-sand);">07.00 - 22.00 WIB</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Buletin Aroma</h4>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Terima kasih telah berlangganan!'); this.reset();">
+          <input type="email" class="custom-input" placeholder="Alamat Email Anda..." required>
+          <button class="btn btn-primary btn-sm" type="submit">Kirim</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aroma & Co. Coffee Roasters. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
