@@ -5406,31 +5406,33 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   TOAST NOTIFICATION (LUXURY ARTISAN FLOATING TOAST)
+   TOAST NOTIFICATION (MINIMALIST LUXURY FLOATING TOAST)
    ========================================================================== */
 .toast {
   position: fixed;
-  bottom: 2rem;
+  top: 1.5rem;
   left: 50%;
-  transform: translateX(-50%) translateY(100px);
-  background: rgba(8, 23, 17, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-gold);
+  transform: translateX(-50%) translateY(-28px);
+  background: rgba(7, 21, 15, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(197, 168, 128, 0.45);
   color: var(--color-cream);
-  padding: 0.85rem 1.6rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), var(--shadow-glow);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65), 0 0 15px rgba(197, 168, 128, 0.12);
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  z-index: 99999;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  z-index: 999999;
   opacity: 0;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
-  max-width: 90vw;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
+  max-width: min(92vw, 420px);
+  cursor: pointer;
+  user-select: none;
 }
 
 .toast.toast-show {
@@ -5441,17 +5443,41 @@ button, input, select, textarea {
 .toast-icon-wrap {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.toast-icon-wrap svg {
+  display: block;
 }
 
 .toast-text-msg {
   color: var(--color-cream);
-  font-size: 0.88rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  flex: 1;
+  word-break: break-word;
 }
 
-.toast-badge-accent {
+.toast-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  cursor: pointer;
+  padding: 2px 4px;
+  line-height: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.toast-close-btn:hover {
   color: var(--color-gold);
-  font-size: 0.75rem;
 }
 
 /* ==========================================================================
@@ -7863,10 +7889,11 @@ html, body, .app-container, .page-transition-wrapper {
 
   /* Modals on Mobile */
   .modal-content {
-    width: 94% !important;
-    max-height: 90vh !important;
-    max-height: 90dvh !important;
-    padding: 1.5rem !important;
+    width: 95% !important;
+    max-width: 95vw !important;
+    max-height: 92vh !important;
+    max-height: 92dvh !important;
+    padding: 1.25rem !important;
     border-radius: var(--radius-sm) !important;
   }
 
@@ -7875,26 +7902,530 @@ html, body, .app-container, .page-transition-wrapper {
     gap: 0.8rem !important;
   }
 
-  .checkout-stepper-bar {
+  /* Toast Notification Precision on Mobile */
+  .toast {
+    top: 1rem !important;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.76rem !important;
     gap: 0.5rem !important;
+    max-width: calc(100vw - 1.5rem) !important;
+    border-radius: var(--radius-full) !important;
+  }
+
+  .toast-text-msg {
+    font-size: 0.76rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .toast-close-btn {
+    font-size: 0.7rem !important;
+    padding: 2px !important;
+  }
+
+  /* Checkout Modal on Mobile */
+  .checkout-modal-backdrop {
+    padding: 0.5rem !important;
+    align-items: flex-start !important;
+    padding-top: 0.75rem !important;
+  }
+
+  .checkout-modal-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: calc(100dvh - 1.5rem) !important;
+    max-height: calc(100vh - 1.5rem) !important;
+    border-radius: var(--radius-sm) !important;
+    margin: 0 auto !important;
+  }
+
+  .checkout-modal-header {
+    padding: 0.75rem 0.95rem !important;
+  }
+
+  .checkout-header-title {
+    gap: 0.6rem !important;
+  }
+
+  .gold-icon-circle {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .checkout-header-title h3 {
+    font-size: 0.98rem !important;
+  }
+
+  .checkout-header-title p {
+    font-size: 0.68rem !important;
+  }
+
+  .checkout-progress-bar {
+    padding: 0.45rem 0.75rem !important;
+    gap: 0.25rem !important;
+  }
+
+  .step-node {
+    gap: 0.25rem !important;
+  }
+
+  .step-number {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 0.68rem !important;
   }
 
   .step-label {
     display: none !important;
   }
 
-  .step-pill {
-    padding: 0.4rem 0.7rem !important;
+  .step-line {
+    margin: 0 0.3rem !important;
+  }
+
+  .checkout-modal-body {
+    padding: 0.85rem 0.85rem !important;
+  }
+
+  /* Step 1 Order Type Tabs on Mobile */
+  .order-type-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.35rem !important;
+  }
+
+  .order-type-btn {
+    padding: 0.5rem 0.25rem !important;
+    border-radius: var(--radius-xs) !important;
+  }
+
+  .order-type-btn .tab-title {
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+  }
+
+  .order-type-btn .tab-desc {
+    display: none !important;
+  }
+
+  .checkout-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  .form-group-item.full-col {
+    grid-column: span 1 !important;
+  }
+
+  .form-control {
+    font-size: 16px !important;
+    padding: 0.65rem 0.8rem !important;
+  }
+
+  .table-quick-select {
+    gap: 0.35rem !important;
+  }
+
+  .table-pill {
+    padding: 0.35rem 0.6rem !important;
+    font-size: 0.74rem !important;
+  }
+
+  .checkout-item-card {
+    padding: 0.65rem 0.75rem !important;
+    gap: 0.65rem !important;
+  }
+
+  .checkout-thumb-box {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .checkout-item-name {
+    font-size: 0.84rem !important;
+  }
+
+  .voucher-form {
+    display: flex !important;
+    gap: 0.4rem !important;
+    width: 100% !important;
+  }
+
+  .voucher-input-wrap {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .voucher-input {
+    font-size: 16px !important;
+    padding: 0.6rem 0.75rem !important;
+  }
+
+  .btn-voucher-apply {
+    padding: 0.6rem 0.9rem !important;
+    font-size: 0.78rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .quick-voucher-pills {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem !important;
+    margin-top: 0.45rem !important;
+  }
+
+  .pill-code {
+    padding: 0.3rem 0.55rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .checkout-summary-box {
+    padding: 0.75rem 0.85rem !important;
+    margin-top: 0.85rem !important;
+  }
+
+  .summary-row {
+    font-size: 0.8rem !important;
+  }
+
+  .total-gold-price {
+    font-size: 1.1rem !important;
+  }
+
+  /* Checkout Action Buttons (Responsive Mobile Sizing) */
+  .checkout-actions-row {
+    flex-direction: column-reverse !important;
+    gap: 0.6rem !important;
+    width: 100% !important;
+    margin-top: 1.1rem !important;
+  }
+
+  .checkout-actions-row .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.86rem !important;
+    white-space: normal !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Step 2 Payment on Mobile */
+  .payment-total-banner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.4rem !important;
+    padding: 0.75rem 0.9rem !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  .banner-amount {
+    font-size: 1.35rem !important;
+  }
+
+  .banner-badge {
+    padding: 0.2rem 0.55rem !important;
+    font-size: 0.68rem !important;
+  }
+
+  .payment-methods-grid {
+    gap: 0.55rem !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  .payment-method-card {
+    padding: 0.7rem 0.8rem !important;
+    gap: 0.6rem !important;
+  }
+
+  .pm-title {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .pm-desc {
+    font-size: 0.68rem !important;
+  }
+
+  .pm-rec-badge {
+    font-size: 0.58rem !important;
+    padding: 0.12rem 0.35rem !important;
+  }
+
+  .payment-instruction-box {
+    padding: 0.75rem 0.8rem !important;
+  }
+
+  .qris-header-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.35rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .qris-title {
+    font-size: 0.88rem !important;
+  }
+
+  .qris-sub {
+    font-size: 0.7rem !important;
+  }
+
+  .qris-timer-pill {
+    font-size: 0.68rem !important;
+    padding: 0.2rem 0.5rem !important;
   }
 
   .qris-qr-center {
     grid-template-columns: 1fr !important;
+    gap: 0.8rem !important;
+    justify-items: center !important;
     text-align: center !important;
   }
 
   .qris-frame {
-    max-width: 200px !important;
+    max-width: 155px !important;
+    padding: 0.45rem !important;
     margin: 0 auto !important;
+  }
+
+  .qris-total-box {
+    padding: 0.45rem 0.65rem !important;
+    width: 100% !important;
+  }
+
+  .q-tot-lbl {
+    font-size: 0.7rem !important;
+  }
+
+  .q-tot-val {
+    font-size: 0.95rem !important;
+  }
+
+  .qris-steps-list {
+    text-align: left !important;
+    font-size: 0.7rem !important;
+    gap: 0.25rem !important;
+  }
+
+  .va-header-box {
+    gap: 0.4rem !important;
+    margin-bottom: 0.55rem !important;
+  }
+
+  .va-header-box h4 {
+    font-size: 0.84rem !important;
+  }
+
+  .va-number-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.6rem !important;
+    padding: 0.7rem 0.8rem !important;
+    text-align: center !important;
+  }
+
+  .va-number-text {
+    font-size: 1.05rem !important;
+    letter-spacing: 1px !important;
+    word-break: break-all !important;
+  }
+
+  .btn-copy-va {
+    width: 100% !important;
+    padding: 0.6rem !important;
+    font-size: 0.8rem !important;
+    justify-content: center !important;
+  }
+
+  .va-instruction-list {
+    font-size: 0.7rem !important;
+  }
+
+  .cash-instruction-display {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.6rem !important;
+  }
+
+  .cash-icon-box {
+    font-size: 1.8rem !important;
+    padding: 0.6rem !important;
+  }
+
+  .cash-text-wrap h4 {
+    font-size: 0.88rem !important;
+  }
+
+  .cash-text-wrap p {
+    font-size: 0.72rem !important;
+  }
+
+  /* Step 3 Receipt on Mobile */
+  .receipt-success-banner {
+    padding: 0.95rem 0.8rem !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  .receipt-success-banner h2 {
+    font-size: 1.15rem !important;
+  }
+
+  .printable-receipt-card {
+    padding: 0.9rem 0.75rem !important;
+    border-radius: 6px !important;
+  }
+
+  .receipt-company-title {
+    font-size: 1rem !important;
+  }
+
+  .receipt-company-sub,
+  .receipt-address-text {
+    font-size: 0.68rem !important;
+  }
+
+  .receipt-meta-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.35rem !important;
+  }
+
+  .receipt-meta-item span {
+    font-size: 0.62rem !important;
+  }
+
+  .receipt-meta-item strong {
+    font-size: 0.74rem !important;
+  }
+
+  .receipt-table-header {
+    font-size: 0.68rem !important;
+    padding: 0.35rem 0 !important;
+  }
+
+  .receipt-item-line {
+    font-size: 0.74rem !important;
+    padding: 0.35rem 0 !important;
+  }
+
+  .receipt-calc-row {
+    font-size: 0.74rem !important;
+  }
+
+  .receipt-calc-row.grand-total {
+    font-size: 0.95rem !important;
+  }
+
+  .receipt-actions {
+    flex-direction: column !important;
+    gap: 0.55rem !important;
+    width: 100% !important;
+    margin-top: 1.1rem !important;
+  }
+
+  .receipt-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.8rem !important;
+    font-size: 0.84rem !important;
+  }
+
+  /* Coffee Detail Modal on Mobile */
+  .luxury-modern-modal {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    max-height: 92vh !important;
+    max-height: 92dvh !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 0 !important;
+  }
+
+  .detail-modal-layout {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .detail-modal-media {
+    height: 180px !important;
+    min-height: 180px !important;
+  }
+
+  .detail-modal-info-col {
+    padding: 0.9rem !important;
+  }
+
+  .detail-title-text {
+    font-size: 1.25rem !important;
+  }
+
+  .detail-bean-specs-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.4rem !important;
+  }
+
+  .artisan-custom-row {
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+  }
+
+  .artisan-chips-wrap {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem !important;
+  }
+
+  .artisan-chip {
+    padding: 0.38rem 0.65rem !important;
+    font-size: 0.74rem !important;
+  }
+
+  .detail-modal-footer {
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    padding: 0.75rem 0.9rem !important;
+    border-top: 1px solid var(--border-color) !important;
+  }
+
+  .footer-qty-control {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .luxury-submit-btn {
+    width: 100% !important;
+    justify-content: space-between !important;
+    padding: 0.8rem 1rem !important;
+    font-size: 0.84rem !important;
+  }
+
+  /* Cart Drawer on Mobile */
+  .cart-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .cart-type-selector {
+    display: flex !important;
+    gap: 0.35rem !important;
+    padding: 0.6rem 0.9rem !important;
+  }
+
+  .type-chip {
+    flex: 1 !important;
+    text-align: center !important;
+    padding: 0.45rem 0.25rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .cart-footer {
+    padding: 0.9rem 0.9rem calc(0.9rem + env(safe-area-inset-bottom)) !important;
+  }
+
+  .checkout-trigger-btn {
+    width: 100% !important;
+    padding: 0.85rem !important;
+    font-size: 0.88rem !important;
   }
 
   /* Article Detail Page on Mobile */
