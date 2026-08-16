@@ -6,7 +6,7 @@ export const ARTICLES_DATA = [
     readTime: '5 Menit Baca',
     author: 'Pratama Wicaksana (Licensed Q-Grader & Roastery Lab)',
     date: '14 Agustus 2026',
-    image: '/assets/images/prod-1.jpg',
+    image: './assets/images/prod-1.jpg',
     excerpt: 'Eksplorasi bagaimana isolasi oksigen dan kontrol suhu fermentasi ragi memicu sintesis ester aromatik, melahirkan profil rasa buah eksotis pada biji kopi arabika.',
     tags: ['Fermentasi Anaerobik', 'Sains Kopi', 'Pasca Panen', 'Gayo Pantan Musara'],
     content: [
@@ -35,7 +35,7 @@ export const ARTICLES_DATA = [
     readTime: '4 Menit Baca',
     author: 'Aurelia Savitri (Divisi Ethical Sourcing & Sustainability)',
     date: '10 Agustus 2026',
-    image: '/assets/images/roastery.jpg',
+    image: './assets/images/roastery.jpg',
     excerpt: 'Transparansi harga beli di atas rata-rata pasar bursa (Fair-plus Premium) dan penyediaan greenhouse penjemuran bagi komunitas petani Subak Abian di Kintamani.',
     tags: ['Direct Trade', 'Kintamani Bali', 'Keberlanjutan', 'Pemberdayaan Petani'],
     content: [
@@ -64,7 +64,7 @@ export const ARTICLES_DATA = [
     readTime: '6 Menit Baca',
     author: 'Hendrik Hartanto (Head Barista & Roaster)',
     date: '05 Agustus 2026',
-    image: '/assets/images/prod-2.jpg',
+    image: './assets/images/prod-2.jpg',
     excerpt: 'Air mencakup 98% dari cangkir kopi Anda. Pahami cara memilih profil air ideal untuk membuka spektrum rasa optimal tanpa rasa pahit berlebih.',
     tags: ['Kimia Air', 'Manual Brew', 'Ekstraksi', 'Tips Barista'],
     content: [

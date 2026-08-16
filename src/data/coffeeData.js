@@ -33,7 +33,7 @@ export const COFFEE_MENU = [
     },
     tags: ["Hot", "Specialty", "Espresso Bar"],
     svgType: "espresso",
-    image: "/assets/images/prod-1.jpg"
+    image: "./assets/images/prod-1.jpg"
   },
   {
     id: "prod-2",
@@ -65,7 +65,7 @@ export const COFFEE_MENU = [
     },
     tags: ["Iced", "Dairy-Free Option", "Cold Brew"],
     svgType: "coldbrew",
-    image: "/assets/images/prod-2.jpg"
+    image: "./assets/images/prod-2.jpg"
   },
   {
     id: "prod-3",
@@ -97,7 +97,7 @@ export const COFFEE_MENU = [
     },
     tags: ["Hot", "Single Origin", "Manual Brew"],
     svgType: "pourover",
-    image: "/assets/images/prod-3.jpg"
+    image: "./assets/images/prod-3.jpg"
   },
   {
     id: "prod-4",
@@ -129,7 +129,7 @@ export const COFFEE_MENU = [
     },
     tags: ["Hot/Iced", "Sweet & Savory", "Specialty Latte"],
     svgType: "latte",
-    image: "/assets/images/prod-4.jpg"
+    image: "./assets/images/prod-4.jpg"
   },
   {
     id: "prod-5",
@@ -161,7 +161,7 @@ export const COFFEE_MENU = [
     },
     tags: ["Iced", "Manual Drip", "Single Origin"],
     svgType: "icedrip",
-    image: "/assets/images/prod-5.jpg"
+    image: "./assets/images/prod-5.jpg"
   },
   {
     id: "prod-6",
@@ -193,7 +193,7 @@ export const COFFEE_MENU = [
     },
     tags: ["Hot/Iced", "Dairy-Free", "Non-Coffee", "Superfood"],
     svgType: "matcha",
-    image: "/assets/images/prod-6.jpg"
+    image: "./assets/images/prod-6.jpg"
   },
   {
     id: "prod-7",
@@ -225,7 +225,7 @@ export const COFFEE_MENU = [
     },
     tags: ["Hot", "Bold Flavor", "Heavy Body"],
     svgType: "frenchpress",
-    image: "/assets/images/prod-7.jpg"
+    image: "./assets/images/prod-7.jpg"
   },
   {
     id: "prod-8",
@@ -257,7 +257,7 @@ export const COFFEE_MENU = [
     },
     tags: ["Bakery", "Pairing Kopi", "Fresh Baked"],
     svgType: "croissant",
-    image: "/assets/images/prod-8.jpg"
+    image: "./assets/images/prod-8.jpg"
   }
 ];
 
@@ -303,7 +303,7 @@ export const OUTLETS_DATA = [
     phone: "+62 21 555 8901",
     features: ["Indoor AC Lounge", "Roasting Lab Experience", "VIP Private Meeting Room", "High-Speed Wi-Fi", "Valet Parking"],
     isPopular: true,
-    image: "/assets/images/hero-bg.jpg"
+    image: "./assets/images/hero-bg.jpg"
   },
   {
     id: "out-2",
@@ -313,7 +313,7 @@ export const OUTLETS_DATA = [
     phone: "+62 21 555 9902",
     features: ["Heritage Garden Terrace", "Manual Brew Bar", "Live Acoustic Stage", "Pet Friendly", "Outdoor Seating"],
     isPopular: false,
-    image: "/assets/images/roastery.jpg"
+    image: "./assets/images/roastery.jpg"
   },
   {
     id: "out-3",
@@ -323,7 +323,7 @@ export const OUTLETS_DATA = [
     phone: "+62 22 420 7711",
     features: ["Cupping Tasting Room", "Pastry Open Kitchen", "Mountain View Terrace", "Free Wi-Fi & Power Plugs"],
     isPopular: false,
-    image: "/assets/images/hero-bg.jpg"
+    image: "./assets/images/hero-bg.jpg"
   }
 ];
 

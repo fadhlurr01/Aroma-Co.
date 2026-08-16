@@ -79,7 +79,7 @@ export default function Home() {
           <div className="hero-photo-frame">
             <div className="hero-img-container">
               <img
-                src="/assets/images/hero-bg.jpg"
+                src="./assets/images/hero-bg.jpg"
                 alt="Aroma & Co Fine Specialty Coffee"
                 className="hero-main-img"
               />
@@ -228,7 +228,7 @@ export default function Home() {
           <div className="story-images-grid">
             <div className="story-img-card card-1 glass-panel">
               <div className="story-img-inner">
-                <img src="/assets/images/roastery.jpg" alt="Aroma & Co Atmosphere & Roasting Lab" />
+                <img src="./assets/images/roastery.jpg" alt="Aroma & Co Atmosphere & Roasting Lab" />
                 <div className="story-badge-sticker">
                   <span>🔥 Micro Roasting Lab</span>
                 </div>
@@ -241,7 +241,7 @@ export default function Home() {
 
             <div className="story-img-card card-2 glass-panel">
               <div className="story-img-inner">
-                <img src="/assets/images/prod-2.jpg" alt="Specialty Coffee Serving & Barista Craft" />
+                <img src="./assets/images/prod-2.jpg" alt="Specialty Coffee Serving & Barista Craft" />
                 <div className="story-badge-sticker">
                   <span>☕ Cupping Score 90+</span>
                 </div>

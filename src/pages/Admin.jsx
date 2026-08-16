@@ -175,7 +175,7 @@ export default function Admin() {
       readTime: newReadTime || '5 Menit Baca',
       author: newAuthor || 'Tim Roastery Lab',
       date: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }),
-      image: imagePreview || '/assets/images/prod-1.jpg',
+      image: imagePreview || './assets/images/prod-1.jpg',
       excerpt: newExcerpt.trim(),
       tags: parsedTags.length > 0 ? parsedTags : ['Kopi Spesialti', 'Roastery Lab'],
       content: structuredContent
@@ -392,7 +392,7 @@ export default function Admin() {
                         {order.items.map((it, idx) => (
                           <div key={idx} className="admin-item-row">
                             <div className="item-thumb-box">
-                              <img src={it.image || '/assets/images/prod-1.jpg'} alt={it.name} />
+                              <img src={it.image || './assets/images/prod-1.jpg'} alt={it.name} />
                             </div>
                             <div className="item-text-info">
                               <strong className="item-name">{it.quantity}x {it.name}</strong>

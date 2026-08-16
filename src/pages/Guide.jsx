@@ -245,7 +245,7 @@ export default function Guide() {
             {/* GAYO */}
             <div className="origin-story-card glass-panel">
               <div className="origin-story-img-wrap">
-                <img src="/assets/images/prod-1.jpg" alt="Kebun Kopi Gayo" className="story-card-img" />
+                <img src="./assets/images/prod-1.jpg" alt="Kebun Kopi Gayo" className="story-card-img" />
                 <span className="origin-elev-badge">1.600 mdpl • Pantan Musara</span>
               </div>
               <div className="origin-story-body">
@@ -270,7 +270,7 @@ export default function Guide() {
             {/* KINTAMANI */}
             <div className="origin-story-card glass-panel">
               <div className="origin-story-img-wrap">
-                <img src="/assets/images/prod-5.jpg" alt="Kebun Kopi Bali Kintamani" className="story-card-img" />
+                <img src="./assets/images/prod-5.jpg" alt="Kebun Kopi Bali Kintamani" className="story-card-img" />
                 <span className="origin-elev-badge">1.450 mdpl • Gunung Batur</span>
               </div>
               <div className="origin-story-body">
@@ -295,7 +295,7 @@ export default function Guide() {
             {/* TORAJA */}
             <div className="origin-story-card glass-panel">
               <div className="origin-story-img-wrap">
-                <img src="/assets/images/prod-2.jpg" alt="Kebun Kopi Toraja" className="story-card-img" />
+                <img src="./assets/images/prod-2.jpg" alt="Kebun Kopi Toraja" className="story-card-img" />
                 <span className="origin-elev-badge">1.800 mdpl • Sapan Minanga</span>
               </div>
               <div className="origin-story-body">

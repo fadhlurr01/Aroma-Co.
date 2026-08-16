@@ -26,7 +26,7 @@ const INITIAL_MOCK_ORDERS = [
         name: 'Sea Salt Caramel Latte',
         price: 40000,
         quantity: 1,
-        image: '/assets/images/prod-1.jpg',
+        image: './assets/images/prod-1.jpg',
         customOptions: { temperature: 'Dingin (Iced)', sweetness: 'Gula 50%', milk: 'Fresh Milk', size: 'Reguler (250ml)' }
       },
       {
@@ -34,7 +34,7 @@ const INITIAL_MOCK_ORDERS = [
         name: 'Golden Velvet Espresso',
         price: 35000,
         quantity: 1,
-        image: '/assets/images/prod-2.jpg',
+        image: './assets/images/prod-2.jpg',
         customOptions: { temperature: 'Panas (Hot)', sweetness: 'Gula 0%', milk: 'Fresh Milk', size: 'Reguler (250ml)', extraShot: '+1 Extra Shot (+8k)' }
       }
     ]
@@ -59,7 +59,7 @@ const INITIAL_MOCK_ORDERS = [
         name: 'Smoked Vanilla Cold Brew',
         price: 42000,
         quantity: 1,
-        image: '/assets/images/prod-3.jpg',
+        image: './assets/images/prod-3.jpg',
         customOptions: { temperature: 'Dingin (Iced)', sweetness: 'Gula 100%', milk: 'Oat Milk (+5k)', size: 'Large (+6k)' }
       }
     ]

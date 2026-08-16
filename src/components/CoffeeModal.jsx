@@ -93,7 +93,7 @@ export default function CoffeeModal({ product, onClose }) {
           <div className="detail-modal-media">
             <div className="detail-modal-img-wrapper">
               <img
-                src={product.image || '/assets/images/prod-1.jpg'}
+                src={product.image || './assets/images/prod-1.jpg'}
                 alt={product.name}
                 className="detail-modal-hero-img"
               />

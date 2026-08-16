@@ -335,7 +335,7 @@ Terima kasih atas pembelian Anda! Simpan struk ini sebagai bukti.
                   {cartState.map((item, idx) => (
                     <div key={`${item.id}-${idx}`} className="checkout-item-card">
                       <div className="checkout-thumb-box">
-                        <img src={item.image || '/assets/images/prod-1.jpg'} alt={item.name} className="checkout-thumb-img" />
+                        <img src={item.image || './assets/images/prod-1.jpg'} alt={item.name} className="checkout-thumb-img" />
                       </div>
 
                       <div className="checkout-item-info">

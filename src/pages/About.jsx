@@ -24,7 +24,7 @@ export default function About() {
             <div className="glass-panel about-img-card">
               <div className="about-img-container">
                 <img
-                  src="/assets/images/roastery.jpg"
+                  src="./assets/images/roastery.jpg"
                   alt="Proses Sangrai Kopi Roastery Lab"
                   className="about-roastery-img"
                 />

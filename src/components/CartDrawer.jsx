@@ -142,7 +142,7 @@ export default function CartDrawer() {
                   {/* PRODUCT THUMBNAIL */}
                   <div className="cart-item-img-box">
                     <img
-                      src={item.image || '/assets/images/prod-1.jpg'}
+                      src={item.image || './assets/images/prod-1.jpg'}
                       alt={item.name}
                       className="cart-item-img"
                     />
