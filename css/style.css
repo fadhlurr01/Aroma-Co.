@@ -5495,6 +5495,21 @@ button, input, select, textarea {
   }
 }
 
+/* Desktop default: mobile drawer & backdrop must be hidden */
+.mobile-nav-drawer {
+  display: none !important;
+}
+
+.mobile-menu-backdrop {
+  display: none !important;
+}
+
+body.mobile-menu-open, html.mobile-menu-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  touch-action: none !important;
+}
+
 @media (max-width: 992px) {
   .top-bar { display: none; }
   
@@ -5508,6 +5523,7 @@ button, input, select, textarea {
 
   /* Full Screen Mobile Navigation Drawer */
   .mobile-nav-drawer {
+    display: flex !important;
     position: fixed;
     top: 0;
     right: 0;
@@ -5519,7 +5535,6 @@ button, input, select, textarea {
     background: #05140E !important;
     background-color: #05140E !important;
     border-left: 1px solid var(--border-gold);
-    display: flex;
     flex-direction: column;
     padding: 1.8rem 1.6rem;
     z-index: 2500;
@@ -5528,6 +5543,14 @@ button, input, select, textarea {
     box-shadow: -15px 0 50px rgba(0, 0, 0, 0.95);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .mobile-nav-drawer::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   .mobile-nav-drawer.active {

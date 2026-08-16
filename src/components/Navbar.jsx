@@ -14,10 +14,16 @@ export default function Navbar() {
   // Prevent background scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('mobile-menu-open');
+      document.documentElement.classList.add('mobile-menu-open');
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.classList.remove('mobile-menu-open');
+      document.documentElement.classList.remove('mobile-menu-open');
     }
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+      document.documentElement.classList.remove('mobile-menu-open');
+    };
   }, [mobileMenuOpen]);
 
   const navLinks = [
