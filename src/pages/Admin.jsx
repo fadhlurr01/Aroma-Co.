@@ -334,7 +334,7 @@ export default function Admin() {
                 filteredOrders.map((order) => (
                   <div
                     key={order.orderId}
-                    className={`glass-panel admin-order-card ${order.status === 'pending' ? 'border-pending' : order.status === 'processing' ? 'border-processing' : ''}`}
+                    className="glass-panel admin-order-card"
                   >
                     {/* TOP HEADER */}
                     <div className="order-card-header">
